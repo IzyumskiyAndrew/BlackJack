@@ -33,14 +33,21 @@ namespace BlackJack
         public int CalculateAmount()
         {
             int amount = 0;
+            int amountOfAces = 0; 
             for (int i = 0; i < _cards.Length; i++)
             {
                 amount += _cards[i].Value;
+                if (_cards[i].Rank.ToString() == "ACE")
+                {
+                    amountOfAces++;
+                }
+                 
             }
             
-            if(amount > 21)
+            while(amount > 21 && amountOfAces > 0)
             {
-                //ReCalc
+                amount = amount - 11 + 1;
+                amountOfAces--;
             }
             
                        
