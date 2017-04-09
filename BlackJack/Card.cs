@@ -21,6 +21,11 @@ namespace BlackJack
             get { return _rank; }
         }
 
+        public int Value
+        {
+            get { return (int)_rank; }
+        }
+
         private Card()
         { }
 
@@ -32,7 +37,9 @@ namespace BlackJack
 
         public void ShowCard()
         {
-            Console.WriteLine("#"+ _suit.ToString()+"_"+ _rank.ToString() +"#");
+            Console.WriteLine($"#{ _suit.ToString()} _ { _rank.ToString()}#  Value: {(int)_rank}");
         }
+
+        
     }
 }

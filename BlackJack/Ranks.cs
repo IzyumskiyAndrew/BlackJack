@@ -8,7 +8,7 @@ namespace BlackJack
 {
     enum Ranks
     {
-        r2,
+        r2 = 2,
         r3,
         r4,
         r5,
@@ -17,9 +17,9 @@ namespace BlackJack
         r8,
         r9,
         r10,
-        JACK,
-        QUEEN,
-        KING,
-        ACE
+        JACK = 10,
+        QUEEN = 10,
+        KING = 10,
+        ACE = 11
     }
 }
