@@ -40,7 +40,7 @@ namespace BlackJack
             
             if(amount > 21)
             {
-
+                //ReCalc
             }
             
                        
