@@ -28,20 +28,22 @@ namespace BlackJack
             casino.AddCard(deck.GetCard());
             player.AddCard(deck.GetCard());
 
-
             casino.ShowFirstCard();
 
+            Console.WriteLine("Your cards:");
             int playerAmount = player.CalculateAmount();
             player.ShowCards();
             player.AskPlayer();
             while (player.Hit)
             {
+                Console.WriteLine("Your cards:");
                 player.AddCard(deck.GetCard());
                 playerAmount = player.CalculateAmount();               
                 player.ShowCards();
                 player.AskPlayer();
             }
             Console.WriteLine("===================================");
+            Console.WriteLine("Casino's cards:");
             int casinoAmount = casino.CalculateAmount();
             while (casino.Hit)
             {

@@ -37,7 +37,17 @@ namespace BlackJack
 
         public void ShowCard()
         {
-            Console.WriteLine($"#{ _suit.ToString()} _ { _rank.ToString()}#  Value: {(int)_rank}");
+            string msg = "";
+            if ((int)_rank != 11)
+            {
+                msg = ((int)_rank).ToString();
+            }
+            else
+            {
+                msg = ((int)_rank).ToString() + " or 1";
+            }
+             
+            Console.WriteLine($"#{ _suit.ToString()} _ { _rank.ToString()}#  Value: " + msg);
         }
 
         
